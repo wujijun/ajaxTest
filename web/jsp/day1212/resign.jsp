@@ -26,16 +26,19 @@
             margin:auto;
             background-color: coral;
         }
+        #message{
+            color: red;
+        }
     </style>
 </head>
 <body>
 
     <form >
-        用户名：<input type="text" name="username" id="uname"><span id="message"></span><br>
-        登录密码：<input type="password" name="password"><br>
-        确认密码：<input type="password" name="password1"><br>
-        电子邮箱： <input type="email" name="email"><br>
-        注册：<input type="button" name="注册" id="button" style="width: 100px">
+        用户名：<input type="text" name="username" id="names" class="do"><span id="message"></span><br>
+        登录密码：<input type="password" name="password" id="password" ><br>
+        确认密码：<input type="password" name="password1" id="password1" class="do"><br>
+        电子邮箱： <input type="email" name="email" id="email" ><br>
+        注册：<input type="button" value="注册" id="button" style="width: 100px">
     </form>
     <div>
         注册成功，请登录：<a href="login">登录</a>
@@ -46,30 +49,43 @@
 
 
  /*注册--判断账户是否重复*/
-         var un ;
-         $("#uname").keyup(function () {
-             un =  $("#uname").val();
+        $(function () {
+            var un ;
+            var psd;
+            var psd1;
+            var email;
 
-             $.ajax({
-                 url:"doRegister",
-                 type:"get",
-                 data:{"unames":un},
-                 success:function (result) {
-                    if (result == "1"){
-                        $("#message").text("sorry,you canot use this name!")
-                    } else {
-                        $("#message").text("you can resign with this name!")
+            $(".do").blur(function () {
+                un =  $("#names").val();
+                psd = $("#password").val();
+                psd1 = $("#password1").val();
+                email = $("#email").val();
+
+                $.ajax({
+                    url:"doRegister",
+                    type:"post",
+                    data:{"names":un ,"password":psd , "password1":psd1 , "email":email},
+
+                    success:function (result) {
+                        if (result == "1"){
+                            console.log(result);
+                            $("#message").text("sorry,you cannot use this name!")
+                        }
+                         else if (result == "2") {
+                            console.log(result);
+                            $("#message").text("√")
+                        }
+                        if (result == "23") {
+                            console.log(result);
+                        }else if (result == "24") {
+                            console.log(result);
+                        }
                     }
-                 }
-             });
-         })
-
-        $("#button").click(function () {
+                });
+            });
+        });
 
 
-        })
-
-     })
 
 
     </script>

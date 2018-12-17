@@ -48,5 +48,6 @@
     </orderEntry>
     <orderEntry type="library" exported="" name="js" level="project" />
     <orderEntry type="library" name="jquery-3.3.1.min" level="project" />
+    <orderEntry type="library" exported="" name="fastjson-1.2.47" level="project" />
   </component>
 </module>

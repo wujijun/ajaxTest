@@ -1,4 +1,4 @@
-package neuedu.test.day1213.util;
+package neuedu.tools.util;
 
 import com.mysql.jdbc.Driver;
 import org.omg.CORBA.Object;

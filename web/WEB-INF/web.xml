@@ -15,8 +15,6 @@
 
 
 
-
-
     <servlet>
         <servlet-name>test</servlet-name>
         <servlet-class>test</servlet-class>
@@ -48,16 +46,6 @@
         <servlet-name>Login</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
-
-    <servlet>
-        <servlet-name>DoLogin</servlet-name>
-        <servlet-class>neuedu.test.day1212.controller.Dologin</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>DoLogin</servlet-name>
-        <url-pattern>/dologin</url-pattern>
-    </servlet-mapping>
-
 
     <servlet>
         <servlet-name>Resign</servlet-name>

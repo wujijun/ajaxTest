@@ -15,6 +15,7 @@
         table{
             border: black 1px solid;
             border-collapse: collapse;
+            margin: auto;
         }
        thead tr th,tbody tr td {
             border:black 1px solid;
@@ -23,11 +24,13 @@
         tbody tr:nth-child(odd){
             background-color: green;
         }
+
     </style>
 </head>
 <body>
-<a href="add">添加</a>
+
     <table>
+
         <thead>
             <tr>
                 <th>商品编号</th>
@@ -49,6 +52,7 @@
             </tr>
         </c:forEach>
 
+<%--老方法--%>
        <%--
         <%
             List<Product> list=(List<Product>)request.getAttribute("list");
@@ -65,10 +69,6 @@
 --%>
         </tbody>
     </table>
-
-
-
-
 
 </body>
 </html>

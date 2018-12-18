@@ -12,11 +12,7 @@ public class Resign extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("jsp/day1212/resign.jsp").forward(req,resp);
-     /*   String username = req.getParameter("username" );
-        String password =req.getParameter("password" );
-        String password1 = req.getParameter("password1" );
-        String email = req.getParameter("email" );
-        System.out.println(username +"  "+password +"  "+password1 +" "+email);*/
+
 
     }
 }

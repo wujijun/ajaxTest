@@ -41,11 +41,6 @@ public class DoResign extends HttpServlet {
                 }
             }
         }
-
-
-
-
     }
-
 
 }
